@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traits</title>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 20px;
+        background-color: #000000; /* Black background */
+        color: #00aaff; /* Blue text color */
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 20px 0;
+      }
+      .header {
+        display: flex;
+        background-color: #222222; /* Dark background for headers */
+        color: #00aaff; /* Blue text color */
+        padding: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      .header div {
+        flex: 1;
+        padding: 12px 15px;
+        border-right: 1px solid #333; /* Darker border */
+      }
+      .header div:last-child {
+        border-right: none;
+      }
+      .row {
+        display: flex;
+        background-color: #1a1a1a; /* Dark grey for even rows */
+        color: #00aaff; /* Blue text color */
+        padding: 10px;
+      }
+      .row:nth-child(even) {
+        background-color: #222222; /* Darker grey for even rows */
+      }
+      .row div {
+        flex: 1;
+        padding: 12px 15px;
+        border-right: 1px solid #333; /* Darker border */
+      }
+      .row div:last-child {
+        border-right: none;
+      }
+      .row:hover {
+        background-color: #333333; /* Slightly lighter dark grey for hover */
+      }
+      .caption {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px 0;
+        color: #00aaff; /* Blue text for caption */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="caption">Traits</div>
+    <div class="container">
+      <div class="header">
+        <div>Display Name</div>
+        <div>Description</div>
+        <div>Tiers</div>
+      </div>
+      <div class="row">
+        <div>Damage</div>
+        <div>Multiplies Damage</div>
+        <div>1, 2, 3, 4, 5</div>
+      </div>
+      <div class="row">
+        <div>Damage</div>
+        <div>Increases Damage</div>
+        <div>1, 2, 3, 4, 5</div>
+      </div>
+      <div class="row">
+        <div>Firerate</div>
+        <div>Multiplies Fire Rate</div>
+        <div>1, 2, 3</div>
+      </div>
+      <div class="row">
+        <div>Firerate</div>
+        <div>Increases Fire Rate</div>
+        <div>1</div>
+      </div>
+      <div class="row">
+        <div>Clip Size</div>
+        <div>Increases Clip Size</div>
+        <div>1, 2, 3, 4, 5</div>
+      </div>
+      <div class="row">
+        <div>Clip Size</div>
+        <div>Adds Clip Size</div>
+        <div>1, 2, 3, 4, 5</div>
+      </div>
+      <div class="row">
+        <div>Reload Speed</div>
+        <div>Multiplies Reload Speed</div>
+        <div>1, 2, 3, 4, 5</div>
+      </div>
+      <div class="row">
+        <div>Automatic</div>
+        <div>Makes the Weapon Automatic, if it is not already.</div>
+        <div>3</div>
+      </div>
+      <div class="row">
+        <div>Incendiary</div>
+        <div>Light your Foes ablaze.</div>
+        <div>3</div>
+      </div>
+      <div class="row">
+        <div>Explosive</div>
+        <div>Do you really need a description for Explosive?</div>
+        <div>-1</div>
+      </div>
+      <div class="row">
+        <div>Money Dropper</div>
+        <div>Victims drop more money on death.</div>
+        <div>2, 3, 4, 5</div>
+      </div>
+      <div class="row">
+        <div>Longshot</div>
+        <div>Reduces damage fall off.</div>
+        <div>-1</div>
+      </div>
+      <div class="row">
+        <div>Lucky Bullets</div>
+        <div>One in every N shots is free.</div>
+        <div>1, 2, 3</div>
+      </div>
+      <div class="row">
+        <div>Life Steal</div>
+        <div>Drain the Life Force of your enemies to power your own.</div>
+        <div>2, 3, 4</div>
+      </div>
+      <div class="row">
+        <div>Door Buster</div>
+        <div>Destroys doors.</div>
+        <div>-1</div>
+      </div>
+      <div class="row">
+        <div>PD Killer</div>
+        <div>Deal Increased damage to Police.</div>
+        <div>2, 3, 4, 5</div>
+      </div>
+      <div class="row">
+        <div>Gang Guzzler</div>
+        <div>Deal extra damage to Gang Members.</div>
+        <div>3, 4</div>
+      </div>
+      <div class="row">
+        <div>Bleedout</div>
+        <div>Causes bleeding damage</div>
+        <div>-1</div>
+      </div>
+      <div class="row">
+        <div>We Are A Team</div>
+        <div>N/A</div>
+        <div>-1</div>
+      </div>
+      <div class="row">
+        <div>SWAT</div>
+        <div>Damage reduction based on number of nearby SWAT</div>
+        <div>-1</div>
+      </div>
+      <div class="row">
+        <div>Grievous Wounds</div>
+        <div>People you shoot cannot gain health for a time</div>
+        <div>-1, -1, -1</div>
+      </div>
+      <div class="row">
+        <div>Cursed</div>
+        <div>Anyone you hit takes 10% extra damage for 5 seconds</div>
+        <div>-1, -1, -1, -1</div>
+      </div>
+      <div class="row">
+        <div>Wallhacks</div>
+        <div>See victim through walls after hitting them.</div>
+        <div>4, 5</div>
+      </div>
+      <div class="row">
+        <div>Blast Shield</div>
+        <div>N/A</div>
+        <div>-1</div>
+      </div>
+      <div class="row">
+        <div>Drunk</div>
+        <div>N/A</div>
+        <div>-1</div>
+      </div>
+      <div class="row">
+        <div>Bulwark</div>
+        <div>Gain Armor on hit.</div>
+        <div>3, 4</div>
+      </div>
+      <div class="row">
+        <div>King Slayer</div>
+        <div>Increased damage to Mayor, Instantly kills at Rank 3.</div>
+        <div>3, 4, 5</div>
+      </div>
+      <div class="row">
+        <div>King's Guard</div>
+        <div>
+          Increased damage to people that've damaged the Mayor recently.
+        </div>
+        <div>-1</div>
+      </div>
+      <div class="row">
+        <div>Healing Bullets</div>
+        <div>Instead of Damaging people, you heal them!</div>
+        <div>5</div>
+      </div>
+      <div class="row">
+        <div>Soulbound</div>
+        <div>Returns to inventory/bank on death, loses 1 rank everytime</div>
+        <div>-1</div>
+      </div>
+      <div class="row">
+        <div>Silent</div>
+        <div>Doesn't make noise</div>
+        <div>-1</div>
+      </div>
+      <div class="row">
+        <div>Shatter</div>
+        <div>Deals extra damage to armor.</div>
+        <div>2, 3</div>
+      </div>
+      <div class="row">
+        <div>Armor Pierce</div>
+        <div>Some damage ignores armor.</div>
+        <div>2, 3</div>
+      </div>
+      <div class="row">
+        <div>Vitamin D Enhanced Bullets</div>
+        <div>
+          Performs better when outside (better accuracy, slightly more damage,
+          etc)
+        </div>
+        <div>2, 3, 4</div>
+      </div>
+      <div class="row">
+        <div>Mole People</div>
+        <div>
+          Performs better when underground (better accuracy, slightly more
+          damage, etc)
+        </div>
+        <div>2, 3, 4</div>
+      </div>
+      <div class="row">
+        <div>Blinding</div>
+        <div>Makes people you shoot blind</div>
+        <div>-1</div>
+      </div>
+      <div class="row">
+        <div>Crowdfunder</div>
+        <div>When you hit someone, you both get money.</div>
+        <div>3, 4, 5</div>
+      </div>
+      <div class="row">
+        <div>Waste Disposal</div>
+        <div>Deals extra damage based on how much trash a player has</div>
+        <div>3</div>
+      </div>
+      <div class="row">
+        <div>Contact High</div>
+        <div>Has a chance to give someone a high effect</div>
+        <div>-1</div>
+      </div>
+      <div class="row">
+        <div>Pick Breaker</div>
+        <div>Deal more damage to people who've lockpicked recently</div>
+        <div>-1</div>
+      </div>
+      <div class="row">
+        <div>Chucking Trash</div>
+        <div>Adds trash to target's inventory</div>
+        <div>3</div>
+      </div>
+      <div class="row">
+        <div>Healthy Reload</div>
+        <div>Drink the bullets out of your gun.</div>
+        <div>2, 3, 4</div>
+      </div>
+      <div class="row">
+        <div>Unarresting Bullets</div>
+        <div>Unarrests people you shoot.</div>
+        <div>3</div>
+      </div>
+      <div class="row">
+        <div>Housing Crisis</div>
+        <div>Deals more damage to targets that own more doors.</div>
+        <div>3</div>
+      </div>
+      <div class="row">
+        <div>Hyperion</div>
+        <div>Your firerate increases the more you shoot.</div>
+        <div>-1</div>
+      </div>
+      <div class="row">
+        <div>Arrests</div>
+        <div>Arrests people on kill.</div>
+        <div>5</div>
+      </div>
+      <div class="row">
+        <div>Engravings</div>
+        <div>Thee who has the highest Engravings shall succeed.</div>
+        <div>1, 2, 3, 4, 5</div>
+      </div>
+      <div class="row">
+        <div>Upside Down</div>
+        <div>Upside down!</div>
+        <div>4</div>
+      </div>
+      <div class="row">
+        <div>Bouncy Bullets</div>
+        <div>Bullets can ricochet more.</div>
+        <div>3, 4, 5</div>
+      </div>
+      <div class="row">
+        <div>AP Rounds</div>
+        <div>Bullets can pierce more.</div>
+        <div>4, 5</div>
+      </div>
+      <div class="row">
+        <div>Anti Air</div>
+        <div>Does more damage to people in the air</div>
+        <div>3</div>
+      </div>
+      <div class="row">
+        <div>Flak</div>
+        <div>Decreased range, increased damage.</div>
+        <div>3, 4</div>
+      </div>
+      <div class="row">
+        <div>Extra Shots</div>
+        <div>Fire 1 extra bullet per shot.</div>
+        <div>5</div>
+      </div>
+      <div class="row">
+        <div>No Vertical Spread</div>
+        <div>Bullet spread limited to 1 axis.</div>
+        <div>4</div>
+      </div>
+      <div class="row">
+        <div>No Horizontal Spread</div>
+        <div>N/A</div>
+        <div>4</div>
+      </div>
+      <div class="row">
+        <div>Knockback</div>
+        <div>When shooting someone, adds knockback.</div>
+        <div>3, 4, 5</div>
+      </div>
+      <div class="row">
+        <div>Birdshot</div>
+        <div>Increases Damage you do to Birds</div>
+        <div>1, 2, 3, 4, 5</div>
+      </div>
+      <div class="row">
+        <div>Nut Kicker</div>
+        <div>
+          When killing a target, a mysterious stranger shows up to add some salt
+          to the wound.
+        </div>
+        <div>5</div>
+      </div>
+    </div>
+  </body>
+</html>

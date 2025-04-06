@@ -1,0 +1,103 @@
+/* Body and General Styling */
+body {
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text */
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Form Container - Centered Vertically and Horizontally */
+#loaForm {
+  background-color: #1e1e1e; /* Slightly lighter than body */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+  max-width: 400px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align items within the form */
+  gap: 15px;
+  text-align: center;
+}
+
+/* Form Heading - Centered and Styled */
+h2 {
+  font-family: "Segoe UI", sans-serif;
+  color: #89cff0; /* Light blue heading */
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+/* Form Element Wrappers */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px; /* Space between label and input */
+}
+
+/* Label and Input Fields */
+label {
+  font-weight: 300;
+  font-size: 1rem;
+  color: #b0b0b0;
+  align-self: flex-start; /* Align labels to the left */
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Button Styling - Centered and Styled */
+button {
+  background-color: #0a84ff; /* Navy blue */
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 150px;
+  align-self: center; /* Center-align button */
+}
+
+button:hover {
+  background-color: #0066cc; /* Darker shade of blue */
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+  body {
+    padding: 20px;
+  }
+
+  #loaForm {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}

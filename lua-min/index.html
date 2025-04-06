@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lua Minifier</title>
+    <link rel="stylesheet" href="/resources/css/welcome.css" />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 20px;
+        background-color: #1e1e1e;
+        color: #ffffff;
+        text-align: center;
+      }
+      h1 {
+        color: #00aaff;
+      }
+      .container {
+        max-width: 600px;
+        margin: auto;
+        text-align: left;
+      }
+      textarea {
+        width: 100%;
+        height: 150px;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #333;
+        border-radius: 5px;
+        background-color: #2e2e2e;
+        color: #ffffff;
+        font-size: 16px;
+        line-height: 1.4;
+        box-sizing: border-box;
+        resize: vertical;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: #ffffff;
+        transition: background 0.3s;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      .copy-button {
+        margin-top: 10px;
+        background-color: #00aaff;
+      }
+      .copy-button:hover {
+        background-color: #007bff;
+      }
+      .info {
+        margin-top: 10px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lua Minifier</h1>
+    <div class="container">
+      <textarea id="input" placeholder="Enter Lua code here..."></textarea>
+      <button onclick="processLua()">Minify</button>
+      <textarea
+        id="output"
+        placeholder="Minified Lua code will appear here..."
+        readonly
+      ></textarea>
+      <button class="copy-button" onclick="copyToClipboard()">Copy</button>
+      <div class="info" id="info"></div>
+    </div>
+
+    <script>
+      function minifyLua(luaCode) {
+        let identifierCount = 0;
+        const luaReserved = [
+          "and",
+          "break",
+          "do",
+          "else",
+          "elseif",
+          "end",
+          "false",
+          "for",
+          "function",
+          "goto",
+          "if",
+          "in",
+          "local",
+          "nil",
+          "not",
+          "or",
+          "repeat",
+          "return",
+          "then",
+          "true",
+          "until",
+          "while",
+          "pairs",
+          "ipairs",
+          "print",
+        ];
+
+        function generateShortName(index) {
+          let name = "";
+          while (index >= 0) {
+            name = String.fromCharCode(97 + (index % 26)) + name;
+            index = Math.floor(index / 26) - 1;
+          }
+          return name;
+        }
+
+        function renameVariables(luaCode) {
+          const variableMap = new Map();
+          let newLuaCode = luaCode.replace(
+            /\blocal\s+(\w+)\b/g,
+            function (match, varName) {
+              if (!luaReserved.includes(varName)) {
+                if (!variableMap.has(varName)) {
+                  variableMap.set(
+                    varName,
+                    generateShortName(identifierCount++)
+                  );
+                }
+                return "local " + variableMap.get(varName);
+              }
+              return match;
+            }
+          );
+          variableMap.forEach((shortName, originalName) => {
+            const regex = new RegExp(`\\b${originalName}\\b`, "g");
+            newLuaCode = newLuaCode.replace(regex, shortName);
+          });
+          return newLuaCode;
+        }
+
+        luaCode = luaCode.replace(/--.*$/gm, "").replace(/\s+/g, " ");
+        luaCode = renameVariables(luaCode);
+        return luaCode.trim();
+      }
+
+      function processLua() {
+        const input = document.getElementById("input").value;
+        const minifiedLua = minifyLua(input);
+        const originalLength = input.length;
+        const minifiedLength = minifiedLua.length;
+        const percentage = (
+          ((originalLength - minifiedLength) / originalLength) *
+          100
+        ).toFixed(2);
+        document.getElementById("output").value = minifiedLua;
+        document.getElementById(
+          "info"
+        ).textContent = `Original: ${originalLength} chars | Minified: ${minifiedLength} chars | Reduced: ${percentage}%`;
+      }
+
+      function copyToClipboard() {
+        const output = document.getElementById("output");
+        output.select();
+        document.execCommand("copy");
+        document.getElementById("info").textContent +=
+          " | Copied to clipboard!";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>The Complete Factorian Guide</title>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #121212;
+        color: #e0e0e0;
+        margin: 0;
+        padding: 20px;
+        line-height: 1.6;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        color: #64ffda;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 2rem;
+        color: #03dac6;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        color: #bb86fc;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #e0e0e0;
+      }
+
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      ul li {
+        margin-bottom: 0.5rem;
+      }
+
+      .contents {
+        margin-bottom: 2rem;
+      }
+
+      a {
+        color: #64ffda;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .image-container {
+        text-align: center;
+        margin: 2rem 0;
+      }
+
+      .image-container img {
+        max-width: 100%;
+        height: auto;
+        border: 2px solid #64ffda;
+      }
+      /* Credit Section Styling */
+      .credit {
+        font-size: 0.9rem;
+        color: #a0a0a0;
+        margin-top: 3rem;
+        text-align: center;
+      }
+
+      .credit a {
+        color: #64ffda;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The Complete Factorian Guide</h1>
+
+    <p>
+      The time is here, the long-awaited Factorian Guide. Complaint after
+      complaint about Factorian being hard to learn can finally be put to rest
+      with this guide. This tutorial will cover how the Multitool works, how to
+      link buildings together, and a brief overview of the most important
+      buildings.
+    </p>
+
+    <div class="contents">
+      <h2>Contents:</h2>
+      <ul>
+        <li>
+          <strong>The Multitool</strong>
+          <ul>
+            <li>Mining</li>
+            <li>Construction</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Buildings</strong>
+          <ul>
+            <li>Drills</li>
+            <li>Melters</li>
+            <li>Assemblers & Refiners</li>
+            <li>Item Cannons</li>
+            <li>Bot Hives</li>
+            <li>The Rocket Silo</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <h2>The Multitool</h2>
+    <p>
+      The multitool will be your main tool for mining before you research Drills
+      and for constructing your setup once you've gotten all the appropriate
+      buildings. It's for more than just construction, however, as it's a
+      fundamental part of early stage automation.
+    </p>
+
+    <h3>Mining</h3>
+    <p>
+      Mining with the multitool is done by simply aiming at the largest part of
+      an ore and holding left click. Each level milestone for Factorian
+      increases ore yield via this method by 1.
+    </p>
+
+    <h3>Construction</h3>
+    <p>
+      The Multitool can be used to place buildings. Left click on a building to
+      select it, then left click again to place it. R to rotate, right click to
+      deselect. On flat ground, building placements snap to a grid. On uneven
+      ground, they don't.
+    </p>
+    <p>
+      You can press R on already placed buildings to rotate them, or right click
+      to collapse them into a pocketable item.
+    </p>
+    <p>
+      To link one building to another (for example, a drill to a storage), place
+      the building with its arrow pointed towards the other building (this
+      indicates where items are being sent to). Note that on a grid, buildings
+      can only be linked if they're placed cardinal to each other, not diagonal.
+      This limitation can be circumvented by placing the machine using the
+      physgun and rotating it into place (to link it organically), or by linking
+      it normally and then moving it (which doesn't break the link until it's
+      moved too far for some reason).
+    </p>
+
+    <div class="image-container">
+      <img
+        src="https://cdn.discordapp.com/attachments/1292537513793294356/1292537514220851271/image.png?ex=670418dd&is=6702c75d&hm=12be264425bb0cf11c70c18c70558163756b471f6a8baec9a5cb6b42fa98931b&"
+        alt="Factorian Gameplay"
+      />
+    </div>
+
+    <h2>Buildings</h2>
+    <p>A brief overview of how the essential buildings work.</p>
+
+    <h3>Drills</h3>
+    <p>
+      Drills must be placed close to an ore source. You can see a Drill's radius
+      with the Multitool. When placed with the multitool or turned off and on
+      again, it will begin mining whatever resource is in range. When linked to
+      storage that can accept ores, it will send the ores there. Drills will
+      occasionally find artifacts buried underground, which can be shot into
+      space later for money and upgrades.
+    </p>
+
+    <h3>Melters</h3>
+    <p>
+      Melters require ore and coal in order to perform their function. Simply
+      feed one both to begin the process.
+    </p>
+
+    <h3>Assemblers & Refiners</h3>
+    <p>
+      Functionally identical, except they craft different items from each other.
+      To use them, select the item you want it to craft, then feed it the
+      required materials, either by hand or by some form of automation.
+      Typically, Assemblers are unable to construct large buildings.
+    </p>
+
+    <h3>Item Cannons</h3>
+    <p>
+      When linked to a container or a machine, spits items from that container
+      or machine to another valid container of your choosing within a certain
+      radius.
+    </p>
+
+    <h3>Bot Hives</h3>
+    <p>
+      Bot hives are largely a set-and-forget building. Place in the spot where
+      its radius covers the most buildings and it'll do its job. For the best
+      results, set the bot type to "gunship".
+    </p>
+    <p>
+      To put it simply, bots from the Bot Hive deliver items from one place to
+      another as needed, effectively an advanced form of automation. With a high
+      enough bot count and a large enough radius, you won't need any other
+      method (except maybe linking for storage reasons).
+    </p>
+
+    <h3>The Rocket Silo</h3>
+    <p>
+      This is where you launch rockets into space to turn a profit. It requires
+      a booster and a payload before it can launch. The payload type increases
+      the number of item stacks you can send at a time. Every 10 minutes, there
+      may be a deal going on where some locations will buy certain products at a
+      higher price than normal. These are the best times to sell.
+    </p>
+
+    <!-- Words of Caution Section -->
+    <h2>Words of Caution</h2>
+
+    <h3>Never leave your rocket unattended.</h3>
+    <p>
+      Not everything that comes off of it can be stolen, but any cash and
+      logistic bots sent back absolutely can be.
+    </p>
+
+    <h3>Inventory your bulk items.</h3>
+    <p>
+      Items in the workbench can only stack up to 500. If you mass produce
+      anything, it's better to put it in your inventory in one big stack instead
+      of packing up carelessly, as you can lose a LOT of items and buildings
+      doing that. The best things to do it with are ores, raw materials, and
+      wires, since you may make too many of these at any given time.
+    </p>
+
+    <div class="credit">
+      <p>
+        Content written by --> <strong>The Don (rubbermage)</strong>. Special
+        thanks for the guide!
+      </p>
+      <p>
+        View the original source
+        <a
+          href="https://discord.com/channels/1181697872304013323/1292537513793294356"
+          >here</a
+        >.
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"
+    <title>LOA Agreement Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <h2>Generate LOA Agreement</h2>
+    <form id="loaForm">
+
+    <div class="form-group">
+        <label for="employeeName">Employee/Member Name:</label>
+        <input type="text" id="employeeName" name="employeeName" required>
+    </div>
+
+    <button type="button" onclick="generatePDF()">Generate PDF</button>
+</form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

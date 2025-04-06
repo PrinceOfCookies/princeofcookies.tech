@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0c0c0c;
+  color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.typewriterText {
+  display: inline;
+}
+
+.typewriter {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  display: inline-block;
+  border-bottom: 1px solid currentColor; /* solid underline */
+}
+
+.typewriter h1 {
+  font-size: 2.5em;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #f5f5f5;
+  animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+footer {
+  background-color: #0c0c0c;
+  padding: 20px 0;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 50px;
+}
+
+footer p:last-of-type {
+  font-size: 14px;
+  color: #999;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-container p {
+  margin: 10px 0;
+  font-weight: 300;
+}
+
+.social-icons {
+  margin: 20px 0;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 24px;
+  color: white; /* Default color is white */
+  text-decoration: none;
+  transition: color 0.4s ease; /* Add a transition for the color change */
+}
+
+.social-icons a:hover {
+  color: #045ddb; /* The color it will transition to on hover */
+}
+
+.container {
+  display: flex;
+  margin-top: 100px;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: left;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Segoe UI", sans-serif;
+  color: #e0e0e0;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #dcdcdc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+  background-color: #242424;
+  border-radius: 8px;
+  box-shadow: #1a1a1a 1px 1px 5px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #292929;
+}
+
+th {
+  background-color: #292929;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #045ddb;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #034bb2;
+}
+
+a {
+  color: #4f8adb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  margin: 20px 0;
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* General mobile styles */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .content {
+    padding: 20px;
+    margin: 0;
+  }
+
+  table {
+    width: 100%; /* Ensure the table doesn't exceed screen width */
+    overflow-x: auto; /* Allow horizontal scrolling if necessary */
+  }
+
+  th,
+  td {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* Smaller devices (like 432px width) */
+@media (max-width: 480px) {
+  body {
+    padding: 15px; /* Add padding to avoid content hitting the edges */
+  }
+
+  .container {
+    margin-top: 50px;
+  }
+
+  h1,
+  h2,
+  p {
+    font-size: 1.2em; /* Adjust text sizes to fit smaller screens */
+  }
+
+  .footer-container {
+    padding: 10px; /* Adjust footer padding */
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .typewriter h1 {
+    font-size: 1.5em; /* Further reduce the font size */
+  }
+
+  .line {
+    width: 100%;
+    height: 2px;
+    background-color: #f5f5f5;
+    margin-top: 5px;
+  }
+}
+
+/* Larger devices (like 992px width) */
+@media (max-width: 768px) {
+  .project-card {
+    margin: 10px;
+    padding: 10px;
+  }
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Blinking cursor animation */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #f5f5f5;
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>401 - Unauthorized</title>
+    <link rel="stylesheet" href="/resources/css/welcome.css" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #0c0c0c;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        text-align: center;
+      }
+      .container {
+        max-width: 600px;
+      }
+      h1 {
+        font-size: 4rem;
+        margin: 0;
+      }
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+      .back-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: #0c0c0c;
+        background-color: #ff3333;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background 0.3s;
+      }
+      .back-btn:hover {
+        background-color: #cc0000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>401</h1>
+      <p>You don't have permission to view this page.</p>
+      <a href="/" class="back-btn">Go Back Home</a>
+    </div>
+  </body>
+</html>
