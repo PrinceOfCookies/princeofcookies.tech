@@ -15,7 +15,7 @@ function typeWriter(elementId, text, speed) {
   }
 
   // Clear text before starting (optional)
-  element.textContent = '';
+  element.textContent = "";
   type();
 }
 
